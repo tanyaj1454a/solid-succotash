@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: Downloading & Installing Essentials
         run: |
-          # استخدام Invoke-WebRequest مع الكتابة الصحيحة
-          Invoke-WebRequest -Uri "https://gitlab.com/chamod2/lm_win-10_github_rdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
+          # استخدام curl لتحميل الملف
+          curl -L "https://gitlab.com/chamod2/lm_win-10_github_rdp/-/raw/main/Downloads.bat" -o "Downloads.bat"
           
           # تشغيل الملف المحمل
           cmd /c Downloads.bat
